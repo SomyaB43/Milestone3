@@ -11,7 +11,6 @@ if files:
 else:
     raise FileNotFoundError("Service account key JSON file not found.")
 
-# TODO: Replace with your Google Cloud project ID and Pub/Sub topic ID
 project_id = "firm-container-448618-s5"
 topic_id = "pedestrian_images"
 
@@ -19,10 +18,9 @@ topic_id = "pedestrian_images"
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(project_id, topic_id)
 
-# Define directory containing your images
-# Define directory containing your images
-image_directory = r"C:\Users\mbaba\OneDrive\Documents\Cloud-Computing\Design-Milestone3\data\images"  # Use raw string (r)
-  # Replace with your directory containing images
+
+image_directory = r"C:\Users\mbaba\OneDrive\Documents\Cloud-Computing\Design-Milestone3\data\images" 
+
 
 # Get all image files (assuming jpg or png files)
 image_files = glob.glob(os.path.join(image_directory, "*.jpg")) + glob.glob(os.path.join(image_directory, "*.png"))
