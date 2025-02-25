@@ -28,7 +28,6 @@ class CustomCommands(setuptools.Command):
         for command in CUSTOM_COMMANDS:
             self.RunCustomCommand(command)
 
-# Add more libraries if needed, such as `torch`
 CUSTOM_COMMANDS = [
     ['pip', 'install', 'torch'],
     ['pip', 'install', 'opencv-python'],
@@ -36,7 +35,6 @@ CUSTOM_COMMANDS = [
     ['pip', 'install', 'pandas'],
     ['pip', 'install', 'google-cloud-pubsub'],
     ['pip', 'install', 'ultralytics'],
-    # Add any other dependencies your script needs
 ]
 
 REQUIRED_PACKAGES = []
