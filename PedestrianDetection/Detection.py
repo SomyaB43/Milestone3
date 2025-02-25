@@ -88,7 +88,7 @@ def process_image(image_path):
 
 class DetectAndEstimateDepth(beam.DoFn):
     def process(self, element):
-        image_data = json.loads(element)  # Assuming the message is in JSON format
+        image_data = json.loads(element) 
         image_path = image_data['image_path']
 
         logging.info(f"Processing image: {image_path}")
@@ -109,7 +109,7 @@ class PublishToPubSub(beam.DoFn):
     def process(self, element):
         try:
             future = self.publisher.publish(self.output_topic, element.encode('utf-8'))
-            future.result()  # Ensure the message is published
+            future.result()  
         except Exception as e:
             logging.error(f"Error publishing message to Pub/Sub: {e}")
 
