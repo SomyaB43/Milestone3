@@ -125,6 +125,6 @@ def run_pipeline(input_subscription, output_topic, project_id):
 if __name__ == "__main__":
     input_subscription = "projects/firm-container-448618-s5/subscriptions/pedestrian_images-sub"  # Replace with your Pub/Sub subscription
     output_topic = "projects/firm-container-448618-s5/topics/pedestrian_predict"  # Replace with your output topic
-    project_id = "firm-container-448618"  # Replace with your Google Cloud project ID
+    project_id = "firm-container-448618-s5"  # Replace with your Google Cloud project ID
 
     run_pipeline(input_subscription, output_topic, project_id)
